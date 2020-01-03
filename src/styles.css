@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.col-md-6:nth-child(1){
+    padding: 10px;
+    background: gray;
+    height: 100;
+}

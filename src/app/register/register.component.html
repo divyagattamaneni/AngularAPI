@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="col-md-4 offset-4 card mt-2">
+        <ng-content select="h1"></ng-content>
+        <form [formGroup]="register">
+            <div class="form-group">
+                username: <input type="text" class="form-control mt-2" placeholder="username" formControlName="username">
+                <div class="text-danger mt-2" *ngIf="username.touched && username.invalid">
+                    <p *ngIf="username.errors.required">username is required</p>
+                    <p *ngIf="username.errors.minlength">username should be minimum 3 characters</p>
+                    <p *ngIf="username.errors.pattern">username is not matching</p>
+                    <p *ngIf="username.errors.removespace">username name cannot containe space</p> 
+                    
+                </div>
+            </div>
+            <div class="form-group">
+                password:<input type="password" class="form-control mt-2" placeholder="password" formControlName="password">
+                <div class="text-danger mt-2" *ngIf="password.touched && password.invalid">
+                    <p *ngIf="password.errors.required">password is required</p>
+                    <p *ngIf="password.errors.minlength">password should be minimum 3 characters</p>
+                    <p *ngIf="password.errors.pattern">password is not matching</p>
+                </div>
+            </div>
+            <ng-content select="button"></ng-content>
+            <ng-content select="div"></ng-content>
+
+        </form>
+
+    </div>
+</div>]
+

@@ -1,0 +1,32 @@
+<button (click)="addnewuser()" class="btn btn-primary mt-2 mb-2">Add New User</button>
+<table class="table table-bordered table-hover table-ligth mt-2">
+    <tr>
+        <th>index</th>
+        <th>photo</th>
+        <th>name</th>
+        <th>age</th>
+        <th>company</th>
+        <th>salary</th>
+        <th>designation</th>
+        <th>gender</th>
+        <th>location</th>
+        <th>education</th>
+        <th>delete user</th>
+    </tr>
+    <tr *ngFor="let user of users; index as i" class="table-ligth text-dark">
+        <td>{{i+1}}</td>
+        <td><img class="img-fluid rounded-circle" src="{{user.photo}}" alt="{{user.name}}"></td>
+        <td>{{user.name}}</td>
+        <td>{{user.age}</td>
+        <td>{{user.company}}</td>
+        <td>{{user.salary}}</td>
+        <td>{{user.designation}</td>
+        <td>{{user.gender}}</td>
+        <td>{{user.location}}</td>
+        <td>{{user.education}}</td>
+        <td>
+            <button class="btn btn-danger btn-sm" (click)="removeuser(user)">Remove</button>
+        </td>
+
+    </tr>
+</table>

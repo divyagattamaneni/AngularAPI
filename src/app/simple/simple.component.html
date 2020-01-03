@@ -1,0 +1,77 @@
+
+<!-- <div>
+    <h1 class="text-success" *ngIf="users.length > 0 ">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let user of users">{{user}}</li>
+        </ul>
+    </h1>
+</div>
+<div>
+    <h1 class="text-danger" *ngIf="users.length==0"> NO users are there</h1>
+</div> -->
+<!-- <div *ngIf="users.length > 0; then UserList; else noUserList"> </div>
+<ng-template #UserList>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let user of users; index as i; even as Even; odd as Odd; first as First;last as Last ">
+            <span class="badge badge-dark p-2 mr-2">{{i+1}}</span>
+            {{user}}
+            <span class="badge badge-success float-right" *ngIf="Even">even</span>
+            <span class="badge badge-danger float-right" *ngIf="Odd">odd</span>
+        </li>
+    </ul>
+</ng-template>
+<ng-template #noUserList>
+    <h1 class="text-danger">No user here</h1>
+</ng-template>  -->
+
+<!-- <div [hidden]="users.length ==0">users are here</div>
+<div [hidden]="users.length >0 ">users are not there</div> -->
+
+<!-- <span [ngSwitch]="color">
+    <p *ngSwitchCase='red'>
+        <span class="text-success">red color here</span>
+    </p>
+    <p *ngSwitchCase='green'>
+        <span class="text-danger">green color here</span>
+    </p>
+    <p *ngSwitchCase='pink'>
+        <span class="text-black">pink color here</span>
+    </p>
+    <p *ngSwitchDefault>
+        <span class="text-dark">no color here</span>
+    </p>
+</span> -->
+<!-- 
+<button [ngClass]="'btn btn-dark'"> Btn-Dark </button>
+<button [ngClass]="['btn','btn-success']"> submit </button>
+<button [ngClass]="{ btn:true,'btn-danger:true'"> Btn Danger class</button> -->
+
+<!-- <div class="container">
+    <button (click)="toggleState()">Submit</button>
+</div>
+<div [ngClass]="dynamicCss()">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi magnam quae illum optio ullam? Possimus enim a 
+iusto eligendi eveniet et quos, qui tempora saepe pariatur aut aliquid, officiis error fugit nesciunt? Quas atque ex ea natus error
+ exercitationem, harum omnis fugiat magni sint quidem voluptatem similique architecto expedita sit?
+</div>
+<div  [ngClass]="newOne()">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, facilis voluptate. Aliquid, architecto quam harum quos
+     facere laborum labore non, ducimus a blanditiis reiciendis incidunt possimus ipsam earum veniam similique culpa quod unde 
+     repudiandae aut. Modi dolores asperiores quis aliquam quibusdam rerum minus, voluptatibus ab ducimus aspernatur ratione vitae
+      temporibus ea itaque illo, dicta nulla facilis? Eligendi iusto, illo atque consequatur harum saepe. Eligendi, aut cumque 
+      laudantium voluptates consectetur, dignissimos maxime amet in quod nostrum laboriosam cupiditate aliquam repellendus quam vel, 
+      aperiam vero obcaecati! 
+    Fugit fuga ratione ab inventore! Aliquid cumque repellat corporis deleniti nesciunt corrupti iste expedita reiciendis numquam.
+</div> -->
+
+<div class="container">
+    <ul class="list-group">
+        <li class="list-group-item mt-2" *ngFor="let user of users"
+         [ngStyle]="{'background-color':user.gender ==='female' ?'pink':'skyblue'}" >
+            {{user.name}}
+            {{user.age}}
+           {{user.gender}}
+            {{user.country}}
+        </li>
+    </ul>
+</div>

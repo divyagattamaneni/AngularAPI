@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="col-md-4 offfset-4 card mt-2">
+        <form action="">
+            <h1>ContactForm</h1>
+            <div class="form-group">
+                Name:<input type="text" placeholder="name" class="form-control" formControlName="name">
+                <div class="text-danger" *ngIf="name.touched && name.invalid">
+                    name is required
+                </div>
+            </div>
+            <div class="form-group">
+                Email:<input type="text" placeholder="email" class="form-control" formControlName="email">
+                <div class="text-danger" *ngIf="email.touched && email.invalid">
+                    email is required
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block mt-2">ContactForm</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

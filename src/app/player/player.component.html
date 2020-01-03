@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="col-mg-8 offset-2 mt-2">
+        <div class="form-group">
+            <h1 class="display-5 mt-2 text-uppercase text-success text-bold text-center">Find Players</h1>
+            <input type="text " class="form-control bg-ligth" placeholder="serach cricket player 😀"
+            #player (keyup.enter)="searchPlayer(player.value)">
+        </div>
+    </div>
+    <div>
+        <ul class="list-group">
+            <li class="list-group-item mt-2" >
+                <!-- <span>{{i+1}}</span>
+                <span class="badge badge-primary ml-4 mr-4">player name:</span>
+                <span class="text-dark font-weight-bold">{{player.fullName}}</span> -->
+               <p> <img src="{{playerInfo.imageURL}}" alt=""></p>
+                <h1 class="text-uppercase display-4 font-weigth-bold">{{playerInfo.fullName}}</h1>
+                <p class="float-rigth badge badge-danger">{{playerInfo.currentAge}}</p>
+                <p>{{playerInfo.pid}}</p>
+                <p>{{playerInfo.country}}</p>
+                <p>{{playerInfo.profile}}</p>
+                <p>{{playerInfo.born}}</p>
+            </li>
+        </ul>
+
+    </div>
+</div>
